@@ -20,18 +20,36 @@ body{
     font-family: var(--fuentePrincipal);
 }
 h1{
-    font-size: 5rem;
+    font-size: 4.2rem;
     color: var(--white);
     text-align: center;
 }
 h2{
-    font-size: 4.1rem;
+    font-size: 3.3rem;
     color: var(--viridian-green);
     text-align: center;
 }
 h3{
-    font-size: 3.2rem;
+    font-size: 2.5rem;
     color: var(--apple-green);
+}
+@media (min-width: 768px) {
+    h1 {
+            font-size: 5rem;
+            color: var(--white);
+            text-align: center;
+        }
+    
+        h2 {
+            font-size: 4.1rem;
+            color: var(--viridian-green);
+            text-align: center;
+        }
+    
+        h3 {
+            font-size: 2.5rem;
+            color: var(--apple-green);
+        }
 }
 h1,h2,h3{
     margin:0;
@@ -56,14 +74,15 @@ img{
 .flex{
     display: flex;
 }
-/* Efecto Aumento de escala */
 .escala:hover{
-    transform: scale(1.15);
+    transform: scale(1.1);
+}
+.txt-center{
+    text-align: center;
 }
 /* Navegacion */
 .navegacion{
     max-width: 100%;
-    /* background-color: #543158; */
     text-align: center;
 }
 .navegacion__logo{
@@ -99,14 +118,14 @@ img{
             flex-direction: row;
         }
         .navegacion__botones a {
-            width: 11rem;
+            width: 20rem;
             margin-top: 0rem;
         }
-}
-/* Principal */
+    }
+    /* Principal */
 .principal{
     background-image: url(../img/banner-movil.png);
-    background-position: top left;
+    background-position: center center;
     background-attachment: fixed;
     background-size:cover;
     height: 50rem;
@@ -133,6 +152,7 @@ img{
 @media (min-width: 768px) {
         .principal{
             background-image: url(../img/banner2.png);
+            background-position: top center;
         }
         .principal__contenedor {
             align-items: center;
@@ -167,11 +187,14 @@ img{
     grid-template-columns: repeat(2, 1fr);
     column-gap: 2rem;
 }
-.productos__producto p{
+.productos__producto{
     text-align: center;
+    transition: transform .3s ease-in;
+    margin-bottom: 1rem;
 }
 .producto__texto--descripcion{
     color: var(--davys-grey);
+    height: 4rem;
 }
 .producto__texto--precio{
     color: var(--apple-green);
@@ -185,4 +208,54 @@ img{
         .productos__caja {
             grid-template-columns: repeat(3, 1fr);
         }
+}
+/* Ubicacion y contacto */
+.widget-ubicacion{
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 3rem;
+}
+.widget-ubicacion iframe{
+    width: 100%;
+}
+@media (min-width: 768px) {
+    .widget-ubicacion {
+            width: 100%;
+        }
+}
+.horarios-telefonos{
+    text-align: center;
+    color: var(--apple-green);
+    font-weight: bold;
+    padding: 3rem;
+    font-size: 2.2rem;
+}
+.horarios-telefonos span{
+    color: var(--viridian-green);
+}
+/* Footer */
+.footer{
+    background-color: var(--davys-grey);
+    background-image: url(../img/bg-footer.png);
+    padding: 3rem 0;
+    background-size: 300px;
+    background-repeat: repeat;
+    background-position: center center;
+}
+.footer__contenido{
+    color: var(--white);
+}
+.caja-contenido{
+    flex-wrap: wrap;
+}
+@media (min-width: 768px) {
+.caja-contenido {
+        justify-content: space-between;
+    }
+
+    .footer__contenido {
+        flex: 0 0 calc(40%);
+        /* font-weight: bold; */
+        line-height: 1.5;
+    }
 }
