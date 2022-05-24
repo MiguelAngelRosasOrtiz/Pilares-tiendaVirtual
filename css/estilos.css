@@ -105,10 +105,10 @@ img{
 }
 /* Principal */
 .principal{
-    background-image: url(../img/banner2.png);
-    background-position: center left;
+    background-image: url(../img/banner-movil.png);
+    background-position: top left;
     background-attachment: fixed;
-    background-size: cover;
+    background-size:cover;
     height: 50rem;
 }
 .filtro-transparente{
@@ -131,6 +131,9 @@ img{
     font-size: 3.2rem;
 }
 @media (min-width: 768px) {
+        .principal{
+            background-image: url(../img/banner2.png);
+        }
         .principal__contenedor {
             align-items: center;
             height: inherit;
