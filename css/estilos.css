@@ -1,0 +1,180 @@
+:root{
+    /* CSS HEX */
+        --davys-grey: #525050ff;
+        --apple-green: #7fb414ff;
+        --white: #ffffffff;
+        --viridian-green: #119da4ff;
+        --fuentePrincipal: 'Poppins',
+            sans-serif;
+}
+/* GENERALES */
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*,*::before, *::after{
+    box-sizing: inherit;
+}
+body{
+    font-size: 1.6rem;
+    font-family: var(--fuentePrincipal);
+}
+h1{
+    font-size: 5rem;
+    color: var(--white);
+    text-align: center;
+}
+h2{
+    font-size: 4.1rem;
+    color: var(--viridian-green);
+    text-align: center;
+}
+h3{
+    font-size: 3.2rem;
+    color: var(--apple-green);
+}
+h1,h2,h3{
+    margin:0;
+}
+a{
+    text-decoration: none;
+    font-size: 1.8rem;
+    display: inline-block;
+    color: var(--apple-green);
+    text-align: center;
+    transition: transform .3s ease;
+}
+img{
+    max-width: 100%;
+    max-height: 100%;
+    vertical-align: top;
+}
+.contenedor{
+    width: 80%;
+    margin: 0 auto;
+}
+.flex{
+    display: flex;
+}
+/* Efecto Aumento de escala */
+.escala:hover{
+    transform: scale(1.15);
+}
+/* Navegacion */
+.navegacion{
+    max-width: 100%;
+    /* background-color: #543158; */
+    text-align: center;
+}
+.navegacion__logo{
+    height: 13rem;
+}
+.navegacion__botones{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.navegacion__botones a{
+    margin-top: 1rem;
+}
+@media (min-width: 768px) {
+        .navegacion{
+            text-align: left;
+        }
+        .navegacion__flex {
+            display: flex;
+            justify-content: space-between;
+        }
+    
+        .navegacion__logo {
+            flex: 0 0 calc(38% - 1rem);
+            height: 13rem;
+        }
+    
+        .navegacion__botones {
+            flex: 0 0 calc(62% - 1rem);
+            align-items: center;
+            gap: 4rem;
+            justify-content: flex-end;
+            flex-direction: row;
+        }
+        .navegacion__botones a {
+            width: 11rem;
+            margin-top: 0rem;
+        }
+}
+/* Principal */
+.principal{
+    background-image: url(../img/banner2.png);
+    background-position: center left;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 50rem;
+}
+.filtro-transparente{
+    background-color: #00000027;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+.principal__contenedor{
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+}
+.principal__caja-texto{
+    width: 98%;
+}
+.principal__texto{
+    text-align: left;
+    line-height: 1.2;
+    font-size: 3.2rem;
+}
+@media (min-width: 768px) {
+        .principal__contenedor {
+            align-items: center;
+            height: inherit;
+            justify-content: start;
+        }
+    
+        .principal__caja-texto {
+            width: 70%;
+        }
+    
+        .principal__texto {
+            text-align: center;
+            font-size: 5rem;
+        }
+}
+/* Productos */
+/* Alivio inmediato */
+.productos{
+    padding-top: 3rem;
+}
+.productos h3{
+    margin-top: 3rem;
+    font-weight: normal;
+}
+.productos__caja{
+    margin-top: 4rem;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+}
+.productos__producto p{
+    text-align: center;
+}
+.producto__texto--descripcion{
+    color: var(--davys-grey);
+}
+.producto__texto--precio{
+    color: var(--apple-green);
+    font-weight: bold;
+}
+/* Eticos */
+.eticos h3 span{
+    font-size: 1.9rem;
+}
