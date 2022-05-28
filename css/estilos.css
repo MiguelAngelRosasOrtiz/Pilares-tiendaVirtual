@@ -151,7 +151,7 @@ img{
 }
 @media (min-width: 768px) {
         .principal{
-            background-image: url(../img/banner2.png);
+            background-image: url(../img/banner2.webp);
             background-position: top center;
         }
         .principal__contenedor {
