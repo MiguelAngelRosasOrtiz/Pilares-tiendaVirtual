@@ -1,7 +1,7 @@
 :root{
     /* CSS HEX */
         --davys-grey: #525050ff;
-        --apple-green: #7fb414ff;
+        --apple-green: #25850d;
         --white: #ffffffff;
         --viridian-green: #119da4ff;
         --fuentePrincipal: 'Poppins',
@@ -124,7 +124,7 @@ img{
     }
     /* Principal */
 .principal{
-    background-image: url(../img/banner-movil.png);
+    background-image: url(../img/banner-movil.webp);
     background-position: center center;
     background-attachment: fixed;
     background-size:cover;
