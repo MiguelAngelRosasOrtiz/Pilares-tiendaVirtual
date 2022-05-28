@@ -236,7 +236,7 @@ img{
 /* Footer */
 .footer{
     background-color: var(--davys-grey);
-    background-image: url(../img/bg-footer.png);
+    background-image: url(../img/bg-footer.webp);
     padding: 3rem 0;
     background-size: 300px;
     background-repeat: repeat;
